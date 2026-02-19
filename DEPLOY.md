@@ -101,6 +101,9 @@ source venv/bin/activate
 # 安装依赖
 pip install --upgrade pip
 pip install -r requirements.txt
+# 如果出现 bcrypt 报错，确认 requirements.txt 包含 bcrypt==4.0.1
+# 如果出现 requests 缺失，确认 requirements.txt 包含 requests==2.32.5
+
 
 # 创建配置文件
 cat > .env << EOF
@@ -353,6 +356,9 @@ git pull origin main
 cd backend
 source venv/bin/activate
 pip install -r requirements.txt
+# 如果出现 bcrypt 报错，确认 requirements.txt 包含 bcrypt==4.0.1
+# 如果出现 requests 缺失，确认 requirements.txt 包含 requests==2.32.5
+
 deactivate
 
 # 更新前端
